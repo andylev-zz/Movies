@@ -1,0 +1,59 @@
+<div class="navbar-wagon navbar-fixed-top">
+  <!-- Logo -->
+  <div class="nav-search">
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+      <%= image_tag 'https://res.cloudinary.com/duspt82gb/image/upload/v1535036351/Posters/logo4.png', height: 50 %>
+    <% end %>
+    <div class="search-bar">
+      <%= form_tag posters_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          id: "roundedsearch",
+          class: "form-control",
+          placeholder: "Find a poster..." %>
+      <span id="magnify" class="icon"><i id="mag" class="fa fa-search"></i></span>
+    </div>
+  </div>
+  <% end %>
+
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <% if user_signed_in? %>
+      <!-- Links when logged in -->
+      <%= link_to "Watching", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Sell", new_poster_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Rare Finds", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <!-- Avatar with dropdown menu -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <%= image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle"=>"dropdown" %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li>              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <% end %></li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <% else %>
+      <!-- Login link (when logged out) -->
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <% end %>
+  </div>
+  <!-- Dropdown list appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#">Some mobile link</a></li>
+        <li><a href="#">Other one</a></li>
+        <li><a href="#">Other one</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+

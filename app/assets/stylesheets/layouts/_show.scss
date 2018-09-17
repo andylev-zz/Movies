@@ -1,0 +1,67 @@
+
+.show-details{
+  color: #888;
+}
+
+.show-details h1 {
+  color: $red;
+}
+
+.user-info h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.seller {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+.seller .avatar{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.seller-bio {
+  margin-top: 10px;
+}
+
+.seller-btn {
+  background: $red;
+  font-size: 12px;
+  border-color: $red;
+}
+
+.seller-btn p {
+  margin-bottom: 0px;
+}
+
+
+.image-display-sell {
+  padding-left: 12px;
+  padding-top: 10px;
+}
+
+.confirm-button {
+  padding-top: 10px;
+}
+
+.title-red {
+  color: $red;
+}
+
+.poster-desciption-show h3 {
+  margin-top: 15px;
+
+}
+
+.stick-together {
+  position: relative;
+  .sold {
+    position: absolute;
+    top: 0;
+    right: 55px;
+  }
+}

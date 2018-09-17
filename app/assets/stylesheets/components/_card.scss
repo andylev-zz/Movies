@@ -1,0 +1,73 @@
+.card {
+  height: 450px;
+  position: relative;
+  margin: 20px 0;
+  box-shadow:1px 1px 1px #f9f9f9;
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.sold {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+// .card-category {
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   font-size: 15px;
+//   text-transform: uppercase;
+// }
+.card-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-description h2 {
+  font-size: 24px;
+  color: $red;
+}
+
+.card-description h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: $red;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+.card-description p {
+  font-size: 14px;
+  opacity: 0.9;
+  padding:5px;
+  color: #505050;
+}
+
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: grey;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.2;
+}
+.card-container{
+  height:370px;
+  background-size: cover !important;
+  background-position: center;
+  position: relative;
+}

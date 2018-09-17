@@ -1,0 +1,26 @@
+<div class="container show-details">
+  <div class="row">
+    <div class="col-sm-5 image-display-sell">
+      <img src=" <%= @poster.photo %> "
+      style="width: 405px;">
+    </div>
+    <div class="col-sm-7 title-red">
+      <h2>You pay £<%= @poster.price %> to:</h2>
+      <div class="seller">
+        <div style="width:100%; height:1px; border: 1px solid #F23A3A"></div>
+        <div>
+          <%= image_tag @poster.user.avatar, alt: "alttext", style: "margin-top:-30px;", class: "avatar" %>
+        </div>
+        <div class="seller-contact">
+          <%= @poster.user.username %>
+        </div>
+        <div class="confirm-button">
+          <%= simple_form_for([@poster, @transaction]) do |f| %>
+            <%= f.submit "Confirm Purchase", class: "btn btn-lg btn-primary" %>
+          <% end %>
+          </div>
+      </div>
+<!--       <h2 style="text-align: right;">£<%= @poster.price %></h2> -->
+    </div>
+  </div>
+</div>

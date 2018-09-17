@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="sell-div">
+    <div class="image">
+      <%#= image_tag , alt: "alttext", size: "550x700" %>
+    </div>
+    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+        <%= simple_form_for @poster do |f| %>
+          <%= f.input :artist_name, label: "Which artist was headlining?" %>
+          <%= f.input :venue_name, label: "Which venue hosted this gig?" %>
+          <%= f.input :description, label: "Tell us more about this poster" %>
+          <%= f.input :date, as: :string, input_html: { class: "datepicker" }, label: "What date was the gig?", required: false %>
+          <%= f.input :price, label: "Price in GBP" %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit "List Poster for sale!", class: "sell-btn btn-lg btn btn-danger" %>
+        <% end %>
+    </div>
+  </div>
+</div>
+
+

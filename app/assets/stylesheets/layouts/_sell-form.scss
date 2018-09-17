@@ -1,0 +1,26 @@
+.sell-div {
+  display: flex;
+  border: 1px none black;
+  margin-bottom: 20px;
+}
+
+.image {
+  box-shadow: 1px 2px #888888;
+}
+
+.form-wrapper {
+  padding-top: 30px;
+}
+
+.sell-btn {
+  width: 100%;
+}
+
+.sell-div h1 {
+  color: $red;
+}
+
+.sell-page h1 {
+  color: $red;
+  text-align: center;
+}

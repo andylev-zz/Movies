@@ -1,0 +1,47 @@
+<div class="container show-details">
+  <div class="row">
+    <div class="col-sm-5 image-display-sell">
+      <%# image_tag url('@poster.photo'), width: '400', height: '600', align: 'left'%>
+      <% if @poster.sold %>
+        <div class="stick-together">
+          <%= cl_image_tag @poster.photo, width: 405, crop: :fill %>
+          <%= image_tag "sold.png", alt: "alttext", class: "sold", style: "height: 120px;" %>
+        </div>
+      <% else %>
+       <%= cl_image_tag @poster.photo, width: 405, crop: :fill %>
+      <% end %>
+    </div>
+    <div class="col-sm-7 poster-desciption-show">
+      <h1><%= @poster.artist_name%></h1>
+      <p><i class="fas fa-angle-double-left"></i> <%= @poster.description %> <i class="fas fa-angle-double-right"></i></p>
+      <h3>Venue: <%= @poster.venue_name %></h3>
+      <h3></%> On: <%= @poster.date.strftime("#{@poster.date.day.ordinalize} %B %Y") %></h3>
+      <% if @poster.sold %>
+        <h1><strike>£<%= @poster.price %></strike></h1>
+      <% else %>
+        <h1>£<%= @poster.price %> </h1>
+      <% end %>
+      <% if @poster.sold %>
+        <p></p>
+      <% else %>
+      <%= link_to "Buy Now", new_poster_transaction_path(@poster.id), :class => "btn btn-lg btn-primary"  %>
+      <% end %>
+      <div class="seller">
+        <div style="width:100%; height:1px; border: 1px solid #F23A3A"></div>
+        <div>
+          <%= image_tag @poster.user.avatar, alt: "alttext", style: "margin-top:-30px;", class: "avatar" %>
+        </div>
+        <div class="seller-contact">
+          <%= @poster.user.username %>
+        </div>
+        <div class="btn btn-sml btn-primary seller-btn">  <p>Contact Seller</p>
+        </div>
+        <div class="seller-bio">
+          <i class="fas fa-quote-left"></i>
+          <%= @poster.user.bio %>
+          <i class="fas fa-quote-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

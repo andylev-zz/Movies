@@ -1,0 +1,26 @@
+<% @posters.each do |poster| %>
+  <div class="col-xs-12 col-sm-3">
+    <div class="card" >
+      <div class="card-container" style="background-image: url(<%= poster.photo %>);">
+        <% if poster.sold %>
+          <%= image_tag "sold.png", alt: "alttext", class: "sold", style: "height: 120px;" %>
+        <% end %>
+      </div>
+      <div class="info-holder">
+        <div class="card-description">
+          <h4><%= poster.artist_name %></h4>
+          <% if poster.sold %>
+            <h4><strike>£<%= poster.price %></strike></h4>
+          <% else %>
+            <h4>£<%= poster.price %> </h4>
+          <% end %>
+        </div>
+        <div class="date-place">
+          <p> <%= poster.venue_name %> - <%= poster.date.strftime("#{poster.date.day.ordinalize} %B %Y") %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <%= link_to "", poster_path(poster.id), class: "card-link" %>
+  </div>
+<% end %>
