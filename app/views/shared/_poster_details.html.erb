@@ -5,14 +5,14 @@
     </div>
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
         <%= simple_form_for @poster do |f| %>
-          <%= f.input :artist_name, label: "Which artist was headlining?" %>
-          <%= f.input :venue_name, label: "Which venue hosted this gig?" %>
-          <%= f.input :description, label: "Tell us more about this poster" %>
-          <%= f.input :date, as: :string, input_html: { class: "datepicker" }, label: "What date was the gig?", required: false %>
+          <%= f.input :artist_name, label: "Which actor was staring?" %>
+          <%= f.input :venue_name, label: "Which format is your film" %>
+          <%= f.input :description, label: "Film's Title" %>
+          <%= f.input :date, as: :string, input_html: { class: "datepicker" }, label: "What date was the film purchased?", required: false %>
           <%= f.input :price, label: "Price in GBP" %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>
-          <%= f.submit "List Poster for sale!", class: "sell-btn btn-lg btn btn-danger" %>
+          <%= f.submit "List Movie for sale!", class: "sell-btn btn-lg btn btn-danger" %>
         <% end %>
     </div>
   </div>

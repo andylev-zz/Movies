@@ -4,7 +4,7 @@
 }
 
 .show-details h1 {
-  color: $red;
+  color: $blue;
 }
 
 .user-info h3 {
@@ -54,7 +54,7 @@
 
 .poster-desciption-show h3 {
   margin-top: 15px;
-
+  color: black;
 }
 
 .stick-together {
@@ -63,5 +63,9 @@
     position: absolute;
     top: 0;
     right: 55px;
+  }
+  .btn-lg {
+    margin-bottom: 0px;
+    color: black;
   }
 }

@@ -3,7 +3,7 @@ class PostersController < ApplicationController
 
   def index
     if params[:query].present?
-      sql_query = "posters.artist_name ILIKE :query OR posters.venue_name ILIKE :query"
+      sql_query = "posters.description ILIKE :query OR posters.venue_name ILIKE :query"
       @posters = Poster.where(sql_query, query: "%#{params[:query]}%")
     else
       @posters = Poster.all

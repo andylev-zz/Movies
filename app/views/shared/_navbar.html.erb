@@ -2,7 +2,7 @@
   <!-- Logo -->
   <div class="nav-search">
     <%= link_to root_path, class: "navbar-wagon-brand" do %>
-      <%= image_tag 'https://res.cloudinary.com/duspt82gb/image/upload/v1535036351/Posters/logo4.png', height: 50 %>
+      <%= image_tag 'https://res.cloudinary.com/cocktailsdelivereddotcom/image/upload/v1537211894/noun_Movie_1585351.png', height: 50 %>
     <% end %>
     <div class="search-bar">
       <%= form_tag posters_path, method: :get do %>
@@ -10,7 +10,7 @@
           params[:query],
           id: "roundedsearch",
           class: "form-control",
-          placeholder: "Find a poster..." %>
+          placeholder: "Find a movie..." %>
       <span id="magnify" class="icon"><i id="mag" class="fa fa-search"></i></span>
     </div>
   </div>
@@ -21,9 +21,9 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "Watching", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Home",  root_path,  class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Sell", new_poster_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Rare Finds", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">

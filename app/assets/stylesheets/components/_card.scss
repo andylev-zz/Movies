@@ -2,7 +2,7 @@
   height: 450px;
   position: relative;
   margin: 20px 0;
-  box-shadow:1px 1px 1px #f9f9f9;
+  box-shadow:10px 10px 10px #f9f9f9;
 }
 .card-user {
   position: absolute;
@@ -38,7 +38,7 @@
 .card-description h4 {
   font-size: 20px;
   font-weight: bold;
-  color: $red;
+  color: $blue;
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 2px;
@@ -70,4 +70,7 @@
   background-size: cover !important;
   background-position: center;
   position: relative;
+}
+.a {
+  font-color: black;
 }

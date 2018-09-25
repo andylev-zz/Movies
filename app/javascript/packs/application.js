@@ -11,3 +11,8 @@ import 'bootstrap';
 
 import "../plugins/flatpickr"
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+$('#example').popover(options)

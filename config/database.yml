@@ -56,9 +56,18 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+# test:
+#   <<: *default
+#   database: merch_test
+
+production:
   <<: *default
-  database: merch_test
+  cloud_name: "movie_test"
+  api_key: "812594475489669"
+  api_secret: "En3oYkGrnlxnHz0UR9kFCwKxyK0"
+  secure: true
+  cdn_subdomain: true
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -79,8 +88,16 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: merch_production
-  username: merch
-  password: <%= ENV['MERCH_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: merch_production
+#   username: merch
+  # password: <%= ENV['MERCH_DATABASE_PASSWORD'] %>
+
+  production:
+    <<: *default
+  cloud_name: "movie_pro"
+  api_key: "812594475489669"
+  api_secret: "En3oYkGrnlxnHz0UR9kFCwKxyK0"
+  secure: true
+  cdn_subdomain: true
